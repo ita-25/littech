@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ebleco 26 - Daniel Adeyemi</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+    body {
+        font-family: 'Helvetica', 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+    }
+
+    h2 {
+        color: #1a2a44;
+        font-size: 2em;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .slideshow {
+        position: relative;
+        max-width: 800px;
+        margin: 30px auto;
+        text-align: center;
+        background: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .slide {
+        display: none;
+    }
+
+    .slide.active {
+        display: block;
+    }
+
+    .slide img {
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    .slide p {
+        margin-top: 10px;
+        font-size: 1.1em;
+        color: #333;
+    }
+
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0,0,0,0.5);
+        color: white;
+        border: none;
+        padding: 12px;
+        font-size: 18px;
+        border-radius: 50%;
+        user-select: none;
+    }
+
+    .prev { left: 10px; } 
+    .next { right: 10px; }
+
+    .btn-Register, .btn-About {
+        display: inline-block;
+        background-color: #6a0dad;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 12px 20px;
+        border-radius: 12px;
+        text-decoration: none;
+        margin-top: 15px;
+        transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .btn-Register:hover, .btn-About:hover {
+        background-color: #4b0082;
+        transform: scale(1.05);
+    }
+
+    /* Discount form */
+    #discountForm input {
+        padding:10px;
+        font-size:16px;
+        border-radius:8px;
+        width:200px;
+        border:1px solid #ccc;
+    }
+    #discountForm button {
+        padding:10px 20px;
+        font-size:16px;
+        border:none;
+        border-radius:8px;
+        background-color:#6a0dad;
+        color:white;
+        cursor:pointer;
+        margin-left:5px;
+    }
+
+    #discountMessage {
+        margin-top:15px; 
+        font-weight:bold; 
+        font-size:1.1em;
+    }
+
+    /* Pop animation for Register button */
+    @keyframes pop {
+        0% { transform: scale(0.5); opacity: 0; }
+        50% { transform: scale(1.2); opacity: 1; }
+        100% { transform: scale(1); opacity: 1; }
+    }
+
+    .pop-animation {
+        animation: pop 0.5s ease-out forwards;
+    }
+
+    /* About button under header */
+    .header-btn-container {
+        text-align: center;
+        margin-top: 15px;
+    }
+</style>
+</head>
+<body>
+
+
+
+<header class="hero-section">
+  <div class="hero-content">
+    <h1 class="slide-text">Love,Light & Growth</h1>
+    <p class="slide-text">Experience transformative hypnotic sessions and teachings to create lasting change in your life.</p>
+    <a href="Aboutebleco26.html" class="cta-button slide-text">Reserve A Seat</a>
+  </div>
+</header>
+
+<style>
+/* Hero Section */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url('img15.jpg'); /* Replace with your image */
+  background-size: cover;
+  background-attachment: fixed; /* Parallax effect */
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-family: 'Helvetica', sans-serif;
+  overflow: hidden;
+}
+
+/* Content Styling */
+.hero-content {
+  max-width: 800px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+/* Heading */
+.hero-content h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Paragraph */
+.hero-content p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* CTA Button */
+.cta-button {
+  padding: 15px 30px;
+  font-size: 1.1em;
+  color: white;
+  background-color: purple;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #ff4757;
+}
+
+/* Fade-in text animation */
+.slide-text {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s forwards;
+}
+
+.hero-content h1.slide-text { animation-delay: 0.5s; }
+.hero-content p.slide-text { animation-delay: 1s; }
+.hero-content .cta-button.slide-text { animation-delay: 1.5s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content h1 { font-size: 2em; }
+  .hero-content p { font-size: 1em; }
+}
+</style>
+
+<!-- Section 1: Two-image slideshow "Creating A New Future" -->
+<h2>Creating A New Future</h2>
+<section class="slideshow" id="slideshow1">
+    <div class="slide active">
+        <img src="img14.jpg" alt="Future 1">
+    </div>
+    <div class="slide">
+        <img src="img17.jpg" alt="Future 2">
+    </div>
+
+    <button class="prev" onclick="changeSlide(-1,'slideshow1')">&#10094;</button>
+    <button class="next" onclick="changeSlide(1,'slideshow1')">&#10095;</button>
+</section>
+
+<!-- Section 2: Three-image slideshow (Meditation/Library) -->
+<h2>Library of Audios</h2>
+<section class="slideshow" id="slideshow2">
+    <div class="slide active">
+        <img src="img13.jpg" alt="Meditation 1">
+    </div>
+    <div class="slide">
+        <img src="img15.jpg" alt="Meditation 2">
+    </div>
+    <div class="slide">
+        <img src="img16.jpg" alt="Meditation 3">
+    </div>
+
+    <button class="prev" onclick="changeSlide(-1,'slideshow2')">&#10094;</button>
+    <button class="next" onclick="changeSlide(1,'slideshow2')">&#10095;</button>
+</section>
+
+<!-- Section 3: Slideshow with text under images -->
+<h2>Theta based Affirmations Benefits</h2>
+<section class="slideshow" id="slideshow3">
+    <div class="slide active">
+        <img src="img18.jpg" alt="Benefit 1">
+        <p>Reduces stress and promotes relaxation.</p>
+    </div>
+    <div class="slide">
+        <img src="img19.jpg" alt="Benefit 2">
+        <p>Improves focus and mental clarity.</p>
+    </div>
+    <div class="slide">
+        <img src="img10.jpg" alt="Benefit 3">
+        <p>Supports healthy habits and behavior change.</p>
+    </div>
+
+    <button class="prev" onclick="changeSlide(-1,'slideshow3')">&#10094;</button>
+    <button class="next" onclick="changeSlide(1,'slideshow3')">&#10095;</button>
+</section>
+
+<!-- Section 4: Discount code form integrated with animated Register button -->
+<h2 style="margin-top:40px;">Discount Offer Ends Feb 10, 2026</h2>
+<section style="text-align:center; padding:30px; background-color:#f5f5f5; max-width:500px; margin:0 auto; border-radius:12px;">
+    <p>Use discount code: <strong>EBLECO26OFF</strong></p>
+    <form id="discountForm">
+        <input type="text" id="discountInput" placeholder="Enter code here">
+        <button type="submit">Apply</button>
+    </form>
+    <p id="discountMessage"></p>
+
+    <!-- Register button hidden by default -->
+    <a href="Registernow.html" id="registerBtn" class="btn-Register" style="display:none;">
+        Register Now →
+    </a>
+</section>
+
+<script>
+// Slideshows
+const slideshows = {
+    slideshow1: { current:0, slides: document.querySelectorAll('#slideshow1 .slide') },
+    slideshow2: { current:0, slides: document.querySelectorAll('#slideshow2 .slide') },
+    slideshow3: { current:0, slides: document.querySelectorAll('#slideshow3 .slide') }
+};
+
+function showSlide(index, id){
+    const ss = slideshows[id];
+    ss.slides.forEach(slide => slide.classList.remove('active'));
+    ss.slides[index].classList.add('active');
+    ss.current = index;
+}
+
+function changeSlide(direction, id){
+    const ss = slideshows[id];
+    let next = ss.current + direction;
+    if(next < 0) next = ss.slides.length -1;
+    if(next >= ss.slides.length) next = 0;
+    showSlide(next, id);
+}
+
+// Auto-rotate slideshows
+Object.keys(slideshows).forEach(id => setInterval(()=>changeSlide(1,id),5000));
+
+// Discount code form logic with pop animation
+const form = document.getElementById('discountForm');
+const input = document.getElementById('discountInput');
+const message = document.getElementById('discountMessage');
+const registerBtn = document.getElementById('registerBtn');
+
+form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const code = input.value.trim().toUpperCase();
+    if(code === "EBLECO26OFF"){
+        message.style.color = 'green';
+        message.textContent = "Discount code applied! You can now register.";
+        registerBtn.style.display = "inline-block";
+
+        // Trigger pop animation
+        registerBtn.classList.remove('pop-animation');
+        void registerBtn.offsetWidth; // reflow to restart animation
+        registerBtn.classList.add('pop-animation');
+    } else {
+        message.style.color = 'red';
+        message.textContent = "Invalid code. Please try again!";
+        registerBtn.style.display = "none";
+    }
+});
+</script>
+
+</body>
+</html>

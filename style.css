@@ -1,0 +1,7 @@
+<style>
+  input[type="checkbox"] {
+    vertical-align: middle; /* aligns with text */
+    position: relative;
+    top: 2px; /* push it down a bit */
+  }
+</style>

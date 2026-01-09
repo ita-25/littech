@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LIT Tech - E-Books</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #4B0082;
+      color: white;
+    }
+
+    /* Navbar */
+    header {
+      background: #6A0DAD;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Page Heading */
+    .page-header {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #4B0082, #6A0DAD);
+    }
+    .page-header h1 {
+      font-size: 2.5rem;
+      color: #FFD700;
+    }
+
+    /* Ebooks Section */
+    .ebooks {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .category {
+      margin-bottom: 40px;
+    }
+    .category h2 {
+      color: #FFD700;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+      text-align: center;
+    }
+    .ebook-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+    .ebook-card {
+      background: rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 15px;
+      transition: transform 0.3s;
+    }
+    .ebook-card:hover {
+      transform: translateY(-5px);
+    }
+    .ebook-card a {
+      color: #FFD700;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .ebook-card a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: white;
+      padding: 40px 20px;
+      margin-top: 50px;
+    }
+    .footer-container {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      text-align: center;
+    }
+    .footer-section h3 {
+      color: #FFD700;
+      margin-bottom: 15px;
+    }
+    .footer-section p, .footer-section a {
+      color: #ddd;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .socials a {
+      margin: 0 8px;
+      font-weight: bold;
+      color: #FFD700;
+    }
+    .copyright {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.8rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="About.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <h1>Our Recommended E-Books</h1>
+    <p>Explore top e-books in technology, design, business, and personal growth.</p>
+  </section>
+
+  <!-- Ebooks Section -->
+  <section class="ebooks">
+
+    <!-- Web Development -->
+    <div class="category">
+      <h2>Web Development</h2>
+      <div class="ebook-grid">
+        <div class="ebook-card"><a href="https://www.amazon.com/HTML-CSS-Design-Build-Websites/dp/1118008189" target="_blank">HTML & CSS: Design and Build Websites — Jon Duckett</a></div>
+        <div class="ebook-card"><a href="https://www.oreilly.com/library/view/javascript-the-good/9780596517748/" target="_blank">JavaScript: The Good Parts — Douglas Crockford</a></div>
+        <div class="ebook-card"><a href="https://eloquentjavascript.net/" target="_blank">Eloquent JavaScript — Marijn Haverbeke</a></div>
+        <div class="ebook-card"><a href="https://github.com/getify/You-Dont-Know-JS" target="_blank">You Don’t Know JS (Series) — Kyle Simpson</a></div>
+        <div class="ebook-card"><a href="https://www.oreilly.com/library/view/learning-php-mysql/9781491918661/" target="_blank">Learning PHP, MySQL & JavaScript — Robin Nixon</a></div>
+        <div class="ebook-card"><a href="https://www.fullstackreact.com/" target="_blank">Fullstack React — Anthony Accomazzo et al.</a></div>
+      </div>
+    </div>
+
+    <!-- Mobile Development -->
+    <div class="category">
+      <h2>Mobile App Development</h2>
+      <div class="ebook-grid">
+        <div class="ebook-card"><a href="https://www.amazon.com/Android-Programming-Beginners-development-activities/dp/1789538505" target="_blank">Android Programming for Beginners — John Horton</a></div>
+        <div class="ebook-card"><a href="https://www.oreilly.com/library/view/head-first-android/9781491974056/" target="_blank">Head First Android Development — Dawn Griffiths</a></div>
+        <div class="ebook-card"><a href="https://www.amazon.com/Flutter-Beginners-cross-platform-applications-dp-1838647775" target="_blank">Flutter for Beginners — Alessandro Biessek</a></div>
+        <div class="ebook-card"><a href="https://www.appcoda.com/learnswift/" target="_blank">Beginning iOS Programming with Swift — AppCoda</a></div>
+        <div class="ebook-card"><a href="https://www.manning.com/books/kotlin-in-action" target="_blank">Kotlin in Action — Dmitry Jemerov</a></div>
+        <div class="ebook-card"><a href="https://books.apple.com/us/book/swiftui-essentials/id1465002990" target="_blank">SwiftUI Essentials — Apple Inc.</a></div>
+      </div>
+    </div>
+
+    <!-- UI/UX -->
+    <div class="category">
+      <h2>UI/UX & Design</h2>
+      <div class="ebook-grid">
+        <div class="ebook-card"><a href="https://www.amazon.com/Dont-Make-Think-Revisited-Usability/dp/0321965515" target="_blank">Don’t Make Me Think — Steve Krug</a></div>
+        <div class="ebook-card"><a href="https://www.amazon.com/Design-Everyday-Things-Revised-Expanded/dp/0465050654" target="_blank">The Design of Everyday Things — Don Norman</a></div>
+        <div class="ebook-card"><a href="https://refactoringui.com/book/" target="_blank">Refactoring UI — Adam Wathan & Steve Schoger</a></div>
+        <div class="ebook-card"><a href="https://www.oreilly.com/library/view/lean-ux-2nd/9781491953600/" target="_blank">Lean UX — Jeff Gothelf</a></div>
+        <div class="ebook-card"><a href="https://www.amazon.com/Seductive-Interaction-Design-Creating-Experiences/dp/0321725522" target="_blank">Seductive Interaction Design — Stephen Anderson</a></div>
+        <div class="ebook-card"><a href="https://www.oreilly.com/library/view/designing-interfaces-3rd/9781492051954/" target="_blank">Designing Interfaces — Jenifer Tidwell</a></div>
+      </div>
+    </div>
+
+    <!-- Tech & Business -->
+    <div class="category">
+      <h2>Tech & Business</h2>
+      <div class="ebook-grid">
+        <div class="ebook-card"><a href="https://www.amazon.com/Lean-Startup-Entrepreneurs-Continuous-Innovation/dp/0307887898" target="_blank">The Lean Startup — Eric Ries</a></div>
+        <div class="ebook-card"><a href="https://www.amazon.com/Zero-One-Notes-Startups-Future/dp/0804139296" target="_blank">Zero to One — Peter Thiel</a></div>
+        <div class="ebook-card"><a href="https://www.amazon.com/Hooked-How-Build-Habit-Forming-Products/dp/1591847788" target="_blank">Hooked: How to Build Habit-Forming Products — Nir Eyal</a></div>
+        <div class="ebook-card"><a href="https://www.amazon.com/Crossing-Chasm-3rd-Disruptive-Mainstream/dp/0062292986" target="_blank">Crossing the Chasm — Geoffrey A. Moore</a></div>
+        <div class="ebook-card"><a href="https://www.amazon.com/Measure-What-Matters-Google-Foundation/dp/0525536221" target="_blank">Measure What Matters — John Doerr</a></div>
+        <div class="ebook-card"><a href="https://www.amazon.com/Innovators-Dilemma-Technologies-Management-Innovation/dp/1633691780" target="_blank">The Innovator’s Dilemma — Clayton M. Christensen</a></div>
+      </div>
+    </div>
+
+    <!-- Self-Improvement -->
+    <div class="category">
+      <h2>Self-Improvement & Productivity</h2>
+      <div class="ebook-grid">
+        <div class="ebook-card"><a href="https://jamesclear.com/atomic-habits" target="_blank">Atomic Habits — James Clear</a></div>
+        <div class="ebook-card"><a href="https://www.calnewport.com/books/deep-work/" target="_blank">Deep Work — Cal Newport</a></div>
+        <div class="ebook-card"><a href="https://www.franklincovey.com/the-7-habits/" target="_blank">The 7 Habits of Highly Effective People — Stephen R. Covey</a></div>
+        <div class="ebook-card"><a href="https://www.naphill.org/think-and-grow-rich/" target="_blank">Think and Grow Rich — Napoleon Hill</a></div>
+        <div class="ebook-card"><a href="https://charlesduhigg.com/the-power-of-habit/" target="_blank">The Power of Habit — Charles Duhigg</a></div>
+        <div class="ebook-card"><a href="https://www.goodreads.com/book/show/40745.Mindset" target="_blank">Mindset: The New Psychology of Success — Carol S. Dweck</a></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>LIT TECH</h3>
+        <p>Lagos, Nigeria</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="About.html">About</a></p>
+        <p><a href="services.html">Services</a></p>
+        <p><a href="ebooks.html">E-Books</a></p>
+        <p><a href="cart.html">Book Store</a></p>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>Phone: +234 9130115402</p>
+        <p>Email: theintellect005@gmail.com</p>
+        <p>X: @intellectski</p>
+      </div>
+      <div class="footer-section socials">
+        <h3>Follow Us</h3>
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="@intellectski">X</a>
+        <a href="#">TikTok</a>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2025 LIT TECH. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

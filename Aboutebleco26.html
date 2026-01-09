@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ebleco Homepage</title>
+  <style>
+    /* === Popup Styles === */
+    #popup {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    #popup .content {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      font-family: Arial, sans-serif;
+    }
+    #popup h3 {
+      margin-top: 0;
+    }
+    #popup button {
+      margin-top: 15px;
+      padding: 8px 15px;
+      background: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    #popup button:hover {
+      background: #005fa3;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    
+  </header>
+
+  <!-- === Popup HTML === -->
+  <div id="popup">
+    <div class="content">
+      <h3>🛒 Welcome to Ebleco Community!</h3>
+      <p>We now sell lecture notes and resources. Check out our <a href="cart.html">Store</a> today!</p>
+      <button onclick="document.getElementById('popup').style.display='none'">Got it</button>
+    </div>
+  </div>
+
+  
+  </main>
+
+  <!-- === Popup Script === -->
+  <script>
+    window.onload = function() {
+      document.getElementById("popup").style.display = "flex";
+    };
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Ebleco 25</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f8f8f8;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    /* Hero Slideshow */
+    .hero-slideshow {
+      position: relative;
+      width: 100%;
+      height: 70vh;
+      overflow: hidden;
+    }
+    .slides {
+      display: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+    .slides img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6));
+    }
+    .hero-text {
+      position: absolute;
+      bottom: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      color: #fff;
+      padding: 0 15px;
+    }
+    .hero-text h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    .hero-text p {
+      font-size: 1.2rem;
+    }
+    .fade {
+      animation: fadeEffect 1s ease-in-out;
+    }
+    @keyframes fadeEffect {
+      from { opacity: 0.4 }
+      to { opacity: 1 }
+    }
+    @media (max-width: 768px) {
+      .hero-slideshow { height: 50vh; }
+      .hero-text h1 { font-size: 1.6rem; }
+      .hero-text p { font-size: 1rem; }
+    }
+
+    /* About Container */
+    .about-container {
+      max-width: 900px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      position: relative;
+      overflow: hidden;
+    }
+    .about-container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background: purple;
+    }
+    h2 {
+      text-align: center;
+      color: purple;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+    p {
+      margin: 15px 0;
+      font-size: 20px;
+    }
+    .highlight {
+      background: #f3e9f9;
+      border-left: 4px solid purple;
+      padding: 15px 20px;
+      margin: 20px 0;
+      font-style: italic;
+      color: #4B0082;
+      border-radius: 8px;
+    }
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 25px;
+      flex-wrap: wrap;
+    }
+    .cta-btn, .whatsapp-btn {
+      display: inline-block;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .cta-btn {
+      background: purple;
+      color: white;
+    }
+    .cta-btn:hover {
+      background: #4B0082;
+    }
+    .whatsapp-btn {
+      background: #25D366;
+      color: white;
+    }
+    .whatsapp-btn:hover {
+      background: #128C7E;
+    }
+    .name-input {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Hero Slideshow -->
+  <div class="hero-slideshow">
+    <div class="slides fade">
+      <img src="img9.jpg" alt="Ebleco Banner 1">
+      <div class="overlay"></div>
+      <div class="hero-text">
+        <h1>Welcome to Ebleco 26</h1>
+        <p>Discover Mind, Body & Epigenetics</p>
+      </div>
+    </div>
+
+    <div class="slides fade">
+      <img src="img10.jpg" alt="Ebleco Banner 2">
+      <div class="overlay"></div>
+      <div class="hero-text">
+        <h1>Unlock Possibilities</h1>
+        <p>Where Science Meets Awareness</p>
+      </div>
+    </div>
+
+    <div class="slides fade">
+      <img src="img11.jpg" alt="Ebleco Banner 3">
+      <div class="overlay"></div>
+      <div class="hero-text">
+        <h1>Join the Community</h1>
+        <p>Grow, Learn & Transform Together</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <div class="about-container">
+    <h2>About Ebleco 26</h2>
+    <p>
+      <strong>Ebleco</strong> is a special unit of <strong>LIT Tech</strong>, formed to bring people together for <em>personal growth, development, and deeper awareness</em>. 
+      At Ebleco, we believe science is more than theories—it is a bridge that connects people beyond geographical location, education level, or economic status. 
+    </p>
+    
+    
+  <section class="meditations">
+    <h2>Join The Community</h2>
+    <p>Explore our lectures, notes, and resources for personal growth.</p>
+    
+    <!-- Image -->
+    <img src="img15.jpg" alt="Meditation Image" class="hero-image">
+    
+    <a href="hypnosislibrary.html" class="view-link">Register Now<span>→</span></a>
+</section>
+
+<style>
+.hero-image {
+    width: 100%;         /* Makes image fit the container width */
+    max-width: 600px;    /* Limits how big it gets */
+    height: auto;        /* Keeps aspect ratio */
+    display: block;      /* Makes it easier to center */
+    margin: 20px auto;   /* Centers the image with some spacing */
+    border-radius: 12px; /* Optional: rounded corners */
+}
+</style>
+    
+    
+    
+
+    
+      <p>
+  We explore the idea of possibility—how life, learning, and awareness can expand when people are open to new ways of thinking. 
+  Along the way, we share simple explanations, lecture notes, and practical insights that anyone can understand.
+  Our goal is to help participants connect with themselves and with others on a deeper level of awareness.
+</p>
+
+<div class="highlight">
+  “Science doesn’t divide us—it brings us together. When people gather with open minds, a desire to learn, and genuine curiosity, community forms naturally.”
+</div>
+
+<p>
+  The name <strong>Ebleco</strong> comes from a foreign word meaning <em>“possibility.”</em>  
+  From the beginning, we’ve believed that learning creates unity and builds community. Knowledge is often called power, but it becomes truly empowering when it helps you understand yourself.
+  That is why the Ebleco community exists—to guide people toward greater self-awareness, while allowing each person to think, reflect, and decide what feels true for them.
+</p>
+
+<p>
+  In Ebleco, we break down modern ideas about life, reality, and awareness in a clear and relatable way. Nothing is rushed, and no one is left behind.
+  We explore the understanding that behind everything we experience, there is an underlying intelligence shaping how things work—an idea shared across science, philosophy, and personal growth.
+</p>
+
+<p>
+  We teach that awareness follows a process. We can share the steps and explain the path, but each person chooses whether to walk it.
+  Growth, after all, is a personal journey—no one can take it for you.
+</p>
+
+<div class="center-btn">
+  <a href="moreebleco.html" class="white cta-btn">Know The Community</a>
+</div>
+
+<p>
+  And here’s the best part: you don’t need to be a genius or a science expert to join <strong>Ebleco 26</strong>.
+  All you need is curiosity, a willingness to take notes, reflect on ideas, and ask questions when you can.
+  Together, we explore, challenge doubts, and open ourselves to new possibilities.
+</p>
+    
+    </p>
+
+    
+
+    <div class="btn-group">
+      <a href="Registernow.html" class="cta-btn">SIGN UP</a>
+      
+    </div>
+  </div>
+
+  <script>
+    // Hero Slideshow
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let slides = document.getElementsByClassName("slides");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }    
+      slides[slideIndex-1].style.display = "block";  
+      setTimeout(showSlides, 5000); // Change every 5s
+    }
+
+    // WhatsApp Button
+    function goToWhatsApp() {
+      const nameField = document.getElementById('userName');
+      const name = nameField.value.trim();
+      if (name) {
+        localStorage.setItem('eblecoName', name);
+      }
+      let message = name ? `I'm ${name}, I'm interested in Ebleco 25:` : `Hello sir/maam i'm interested in Ebleco 26:`;
+      const url = `https://wa.me/2349130115402?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
+    }
+  </script>
+
+</body>
+</html>

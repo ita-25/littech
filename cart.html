@@ -1,0 +1,128 @@
+<section class="waitlist" style="
+  background:#fff;
+  color:#333;
+  padding:30px;
+  border-radius:12px;
+  box-shadow:0 6px 16px rgba(0,0,0,0.15);
+  max-width:900px;
+  margin:40px auto;
+  font-family:'Poppins', sans-serif;
+">
+
+  <h2 style="text-align:center;">Join the Book Waitlist</h2>
+
+  <p style="text-align:center;">
+    A practical guide to understanding change — and finally making it stick.
+  </p>
+
+  <p style="text-align:center; font-weight:600;">
+    Author: Olawale Adeyemi
+  </p>
+
+  <p style="text-align:center; font-size:14px; color:#555;">
+    Olawale Adeyemi is a student, philosopher, and community builder, and the founder of the IntellectPro community.
+  </p>
+
+  <p>
+    This upcoming book explores why personal change often feels difficult and how internal resistance quietly shapes our habits.
+    It offers clear, practical steps to help readers build awareness, set intentional goals, and grow with consistency.
+  </p>
+
+  <h4>What You’ll Learn</h4>
+  <ul>
+    <li>How to approach change with clarity and confidence</li>
+    <li>Ways to recognize and overcome internal resistance</li>
+    <li>Simple daily practices for long-term personal growth</li>
+    <li>Reflective exercises that deepen self-awareness</li>
+    <li>Guidance to stay motivated and consistent</li>
+  </ul>
+
+  <p><strong>Planned Price:</strong> $25</p>
+
+  <p>
+    Join the waitlist to be notified when the book is completed and released.
+    Early supporters will receive first access and important updates.
+  </p>
+
+  <!-- WAITLIST FORM -->
+  <form
+    id="waitlistForm"
+    action="https://formspree.io/f/xjggbkae"
+    method="POST"
+    style="display:flex; gap:10px; margin-top:20px;"
+  >
+    <input
+      type="email"
+      name="email"
+      placeholder="Enter your email address"
+      required
+      style="
+        flex:1;
+        padding:12px;
+        border-radius:6px;
+        border:1px solid #ccc;
+      "
+    >
+
+    <input type="hidden" name="source" value="Ebleco Book Waitlist">
+
+    <button
+      type="submit"
+      style="
+        background:#800080;
+        color:white;
+        border:none;
+        padding:12px 18px;
+        border-radius:6px;
+        font-weight:bold;
+        cursor:pointer;
+      "
+    >
+      Join the Waitlist
+    </button>
+  </form>
+
+  <!-- SUCCESS MESSAGE -->
+  <p
+    id="successMessage"
+    style="
+      display:none;
+      margin-top:15px;
+      color:#2e7d32;
+      font-weight:600;
+    "
+  >
+    ✅ You’re on the list! We’ll notify you when the book is ready.
+  </p>
+
+  <!-- SCRIPT -->
+  <script>
+    const form = document.getElementById("waitlistForm");
+    const successMessage = document.getElementById("successMessage");
+
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: formData,
+          headers: { "Accept": "application/json" }
+        });
+
+        if (response.ok) {
+          form.reset();
+          form.style.display = "none";
+          successMessage.style.display = "block";
+        } else {
+          alert("Something went wrong. Please try again.");
+        }
+      } catch (error) {
+        alert("Network error. Please try again.");
+      }
+    });
+  </script>
+
+</section>

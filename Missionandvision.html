@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LIT Tech - Mission & Vision</title>
+  
+  <!-- Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.7;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    section h2 {
+      color: #6a1b9a;
+      margin-bottom: 20px;
+      font-size: 2em;
+      border-bottom: 3px solid #6a1b9a;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    section p {
+      margin-bottom: 20px;
+      font-size: 1.1em;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* ---------------- Mobile Responsive Header Slideshow ---------------- */
+    @media (max-width: 768px) {
+      .slideshow-header {
+        position: relative;
+        width: 100%;
+        height: 50vh;
+        overflow: hidden;
+      }
+
+      .slides-wrapper {
+        display: flex;
+        width: 300%;
+        height: 100%;
+        transition: transform 1s ease-in-out;
+      }
+
+      .slide {
+        width: 100%;
+        flex-shrink: 0;
+        position: relative;
+      }
+
+      .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .slideshow-header .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(106, 27, 154, 0.5);
+        z-index: 1;
+      }
+
+      .header-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 2;
+        color: #fff;
+        padding: 0 15px;
+      }
+
+      .header-text h1 {
+        font-size: 1.8rem;
+        margin: 0 0 10px;
+        text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+      }
+
+      .header-text p {
+        font-size: 1rem;
+        margin: 0;
+        text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+      }
+
+      .dots-container {
+        position: absolute;
+        bottom: 5%;
+        width: 100%;
+        text-align: center;
+        z-index: 2;
+      }
+
+      .dot {
+        height: 12px;
+        width: 12px;
+        margin: 0 3px;
+        display: inline-block;
+        background-color: #bbb;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .dot.active {
+        background-color: #fff;
+      }
+
+      /* ---------------- Mission in Action slideshow ---------------- */
+      #mission-aside .slideshow-container {
+        width: 100%;
+        max-width: 100%;
+        height: 40vh; 
+        overflow: hidden;
+        margin: 20px 0;
+        border-radius: 12px;
+      }
+
+      #mission-aside .slideshow-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ---------------- Header Slideshow ---------------- -->
+  <header class="slideshow-header">
+    <div class="overlay"></div>
+
+    <div class="header-text">
+      <h1>Mission & Vision</h1>
+      <p>Discover the guiding purpose and aspirations of LIT Tech.</p>
+    </div>
+
+    <div class="slides-wrapper">
+      <div class="slide">
+        <img src="img1.jpg" alt="Slide 1">
+      </div>
+      <div class="slide">
+        <img src="img2.jpg" alt="Slide 2">
+      </div>
+      <div class="slide">
+        <img src="img6.jpg" alt="Slide 3">
+      </div>
+    </div>
+
+    <div class="dots-container">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+  </header>
+
+  <!-- ---------------- Mission Section ---------------- -->
+  <section id="mission">
+    <h2>Our Mission</h2>
+    <p>At LIT Tech, our mission is to empower individuals and businesses across Africa through innovative technology solutions. We strive to create web and mobile applications that are not only cutting-edge but also practical, accessible, and transformative. Our focus is on delivering tools that simplify complex processes, enhance learning experiences, and open new opportunities for growth.</p>
+    <p>We are committed to bridging the digital divide by providing affordable and scalable solutions, fostering digital literacy, and promoting technology education. By collaborating with communities, schools, and enterprises, we ensure our solutions have real-world impact and reach the people who need them most.</p>
+    <p>Our mission also includes nurturing local talent, mentoring future developers, and inspiring the next generation of African innovators to embrace technology as a force for positive change.</p>
+
+    <!-- Mission in Action Slideshow -->
+    <aside id="mission-aside">
+      <h3>Our Mission in Action</h3>
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="img4.jpg" alt="Mission Image 1">
+        </div>
+        <div class="mySlides fade">
+          <img src="img5.jpg" alt="Mission Image 2">
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <!-- ---------------- Vision Section ---------------- -->
+  <section id="vision">
+    <h2>Our Vision</h2>
+    <p>LIT Tech envisions a technologically empowered Africa, where every individual and organization has the tools, knowledge, and confidence to thrive in a digital world. We see a future where innovation knows no boundaries, where startups, schools, and communities can leverage technology to solve pressing challenges and create sustainable growth.</p>
+    <p>Our vision includes becoming a leading technology company recognized for excellence, creativity, and social impact. We aim to transform ideas into solutions that matter, creating a digital ecosystem that connects people, enhances opportunities, and inspires lifelong learning.</p>
+    <p>Ultimately, we aspire to be a catalyst for progress, driving digital transformation across the continent while staying true to our values of integrity, inclusivity, and innovation.</p>
+  </section>
+
+  <!-- ---------------- Footer ---------------- -->
+  <footer>
+    <div class="footer-container">
+      <div>
+        <h3>Our Office</h3>
+        <p>Lagos, Nigeria</p>
+      </div>
+      <div>
+        <h3>Navigations</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Tech Blog</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Follow Us</h3>
+        <div class="socials">
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#"(Twitter)</a>
+          <a href="#">TikTok</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 LIT Tech. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ---------------- JavaScript ---------------- -->
+  <script>
+    // Header Slideshow
+    let currentIndex = 0;
+    const slidesWrapper = document.querySelector(".slides-wrapper");
+    const totalSlides = document.querySelectorAll(".slide").length;
+    const dots = document.getElementsByClassName("dot");
+
+    function showSlide(index) {
+      slidesWrapper.style.transform = `translateX(-${index * 100}%)`;
+      for (let i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      dots[index].className += " active";
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      showSlide(currentIndex);
+    }
+
+    showSlide(currentIndex);
+    setInterval(nextSlide, 7000);
+
+    function currentSlide(n) {
+      currentIndex = n - 1;
+      showSlide(currentIndex);
+    }
+
+    // Mission in Action Slideshow
+    let slideIndexAside = 0;
+    const mySlides = document.getElementsByClassName("mySlides");
+    function showAsideSlides() {
+      for (let i = 0; i < mySlides.length; i++) {
+        mySlides[i].style.display = "none";  
+      }
+      slideIndexAside++;
+      if (slideIndexAside > mySlides.length) {slideIndexAside = 1}    
+      mySlides[slideIndexAside-1].style.display = "block";  
+      setTimeout(showAsideSlides, 7000);
+    }
+    showAsideSlides();
+  </script>
+
+</body>
+</html>

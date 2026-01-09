@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LIT Tech Volunteer Application</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fafafa;
+      color: #333;
+    }
+
+    header {
+      background: #4b0082;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    /* Slideshow Styles */
+    .slideshow-container {
+      position: relative;
+      max-width: 1000px;
+      margin: 2rem auto;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+
+    .slide {
+      display: none;
+      width: 100%;
+    }
+
+    .slide-image {
+      width: 100%;
+      height: 400px; /* adjust height as needed */
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    /* Fade animation */
+    .fade {
+      animation: fade 1s ease-in-out;
+    }
+
+    @keyframes fade {
+      from {opacity: 0.4} 
+      to {opacity: 1}
+    }
+
+    /* Optional: navigation dots */
+    .dot-container {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .dot {
+      height: 12px;
+      width: 12px;
+      margin: 0 4px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    .active-dot {
+      background-color: #4b0082;
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: #f9f9ff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    .faq-title {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #4b0082;
+    }
+    .faq-item {
+      margin-bottom: 0.8rem;
+      border-bottom: 1px solid #ddd;
+    }
+    .faq-question {
+      width: 100%;
+      text-align: left;
+      background: #fff;
+      border: none;
+      padding: 0.9rem;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background 0.2s ease;
+      color: #4b0082;
+    }
+    .faq-question:hover {
+      background: #f0e6ff;
+    }
+    .faq-answer {
+      display: none;
+      padding: 0.8rem 1rem;
+      font-size: 0.95rem;
+      color: #333;
+      line-height: 1.5;
+    }
+    .faq-answer ul {
+      margin: 0.5rem 0 0 1.2rem;
+    }
+    .apply-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background: #4b0082;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background 0.2s ease;
+    }
+    .apply-btn:hover {
+      background: #6a0dad;
+    }
+
+    /* Footer */
+    footer {
+      background: #4b0082;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .footer-section h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+    .footer-section p,
+    .footer-section a {
+      font-size: 14px;
+      color: #e5e7eb;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .footer-section a:hover {
+      text-decoration: underline;
+    }
+    .footer-bottom {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #d1d5db;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>LIT Tech Volunteer Application</h1>
+    <p>Join us in building innovation and community through technology</p>
+  </header>
+
+  <!-- Slideshow Section -->
+  <section class="slideshow-container">
+    <div class="slide fade">
+      <img src="img6.jpg" alt="Tech Workshop" class="slide-image">
+    </div>
+    <div class="slide fade">
+      <img src="img7.jpg" alt="Community Event" class="slide-image">
+    </div>
+    <div class="slide fade">
+      <img src="img8.jpg" alt="Innovation Lab" class="slide-image">
+    </div>
+  </section>
+
+  <div class="dot-container">
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+  </div>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <h2 class="faq-title">Frequently Asked Questions</h2>
+    
+    <div class="faq-item">
+      <button class="faq-question">1. Who can apply to be a LIT Tech volunteer?</button>
+      <div class="faq-answer">
+        <p>We welcome individuals who are:</p>
+        <ul>
+          <li>Between the ages of <strong>18 and 35</strong></li>
+          <li>Passionate about <strong>technology,science communities, innovation, and community development</strong></li>
+          <li>Able to commit at least <strong>5 hours per week</strong></li>
+          <li>Located in <strong>Lagos in Nigeria</strong> or able to work remotely if applicable</li>
+        </ul>
+      </div>
+    </div>
+    
+
+    <div class="faq-item">
+      <button class="faq-question">2.Do I need to be a tech expert to volunteer?</button>
+      <div class="faq-answer">
+        <p>Not at all! While technical knowledge is an advantage, we also need volunteers in areas like communication, design, planning, and community engagement.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">3. Is this a fully paid opportunity?</button>
+      <div class="faq-answer">
+        <p>No. This is a <strong>volunteer role</strong>. Volunteers will not receive financial compensation. However volunteers will gain:</p>
+        <ul>
+          <li>Hands-on experience in real-world projects</li>
+          <li>Networking opportunities with professionals in tech</li>
+          <li>Mentorship and training opportunities</li>
+          <li>A <strong>certificate of recognition</strong> for outstanding contributions</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">4. What is the time commitment required?</button>
+      <div class="faq-answer">
+        <p>We expect volunteers to commit at least <strong>5 hours per week</strong> for a minimum of <strong>6 months/period</strong>. This helps us maintain consistency and impact.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">5. What happens if I don’t meet the eligibility criteria?</button>
+      <div class="faq-answer">
+        <p>If you do not meet the requirements (age, location, or availability), we kindly ask that you <strong>do not apply at this time</strong>. Keep following us for future opportunities that may be a better fit.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">6. Will volunteers receive training?</button>
+      <div class="faq-answer">
+        <p>Yes! We provide <strong>orientation and role-specific guidance</strong> so you can contribute effectively.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">7. How do I apply?</button>
+      <div class="faq-answer">
+        <p>Simply complete the <strong>Volunteer Application Form</strong>. Please read the requirements carefully before submitting.</p>
+        <a href="Volunteer.html" class="apply-btn">Go to Application Form</a>
+      </div>
+    </div>
+ 
+</section>
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>LIT TECH</h3>
+        <p>Lagos, Nigeria</p>
+        <p><a href="mailto:theintellect005@gmail.com">theintellect005@gmail.com</a></p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="Newsletter.html">Newsletter</a>
+        <a href="volunteer.html">Apply to Volunteer</a>
+      </div>
+      <div class="footer-section">
+        <h3>Connect</h3>
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 LIT Tech. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- FAQ Script -->
+  <script>
+    // FAQ toggle
+    const questions = document.querySelectorAll(".faq-question");
+    questions.forEach((q) => {
+      q.addEventListener("click", () => {
+        const answer = q.nextElementSibling;
+        answer.style.display = (answer.style.display === "block") ? "none" : "block";
+      });
+    });
+
+    // Slideshow
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slide");
+    const dots = document.querySelectorAll(".dot");
+
+    function showSlides() {
+      slides.forEach(slide => slide.style.display = "none");
+      slideIndex++;
+      if(slideIndex > slides.length) {slideIndex = 1;}
+      slides[slideIndex-1].style.display = "block";
+
+      dots.forEach(dot => dot.classList.remove("active-dot"));
+      dots[slideIndex-1].classList.add("active-dot");
+
+      setTimeout(showSlides, 5000); // Change slide every 5s
+    }
+
+    showSlides();
+  </script>
+
+</body>
+</html>

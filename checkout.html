@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout - Ebleco</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  body {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #4B0082;
+    color: #fff;
+    padding-top: 70px; /* space for fixed header */
+  }
+
+  /* Header & Hamburger */
+  header {
+    background: #800080;
+    color: #fff;
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+
+  .hamburger div {
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 3px;
+  }
+
+  nav {
+    display: flex;
+    gap: 15px;
+  }
+
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  nav a:hover { text-decoration: underline; }
+
+  @media (max-width: 768px) {
+    .hamburger { display: flex; }
+    nav {
+      display: none;
+      flex-direction: column;
+      background: #6A0DAD;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      padding: 15px;
+      border-radius: 0 0 8px 8px;
+      width: 200px;
+    }
+    nav.show { display: flex; }
+  }
+
+  /* Hero Section */
+ .hero {
+  background: linear-gradient(rgba(75,0,130,0.6), rgba(75,0,130,0.6)), 
+              url('img21.jpg') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 8px;
+  margin: 20px;
+}
+
+.hero h2 { 
+  margin: 0; 
+  font-size: 36px; 
+}
+
+.hero p { 
+  font-size: 18px; 
+  margin-top: 10px; 
+}
+
+  .hero h2 { margin: 0; font-size: 36px; }
+  .hero p { font-size: 18px; margin-top: 10px; }
+
+  /* Container */
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+  h2, h3 { margin-top: 0; color: #4B0082; }
+
+  .bank-info {
+    background: #f3f3f3;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+
+  .bank-info p { margin: 8px 0; font-size: 16px; color: #333; }
+
+  .steps { margin-bottom: 20px; }
+  .steps ol { padding-left: 20px; color: #333; }
+
+  form { margin-top: 20px; }
+  label { display: block; margin-bottom: 8px; font-weight: bold; color: #4B0082; }
+  input, textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+  }
+
+  button {
+    padding: 12px 18px;
+    background: #800080;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+  }
+
+  button:hover { 
+    background: #4B0082; 
+    transform: scale(1.05);
+  }
+
+  /* Black & White Return Button */
+  .btn-return {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    background: #000;
+    color: #fff;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+  }
+
+  .btn-return:hover {
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+    transform: scale(1.05);
+  }
+
+  .note { margin-top: 15px; font-size: 14px; color: #555; font-style: italic; }
+
+  /* Footer Section */
+  footer {
+    background: #800080;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 40px;
+    border-top: 2px solid #4B0082;
+  }
+
+  footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+
+  footer a:hover { text-decoration: underline; }
+  footer p { margin: 5px 0; font-size: 14px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Ebleco Community Store</h1>
+  <div class="hamburger" onclick="toggleMenu()"><div></div><div></div><div></div></div>
+  <nav id="navMenu">
+    <a href="index.html">Home</a>
+    <a href="cart.html">Shop</a>
+    <a href="hypnosislibrary.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="hero">
+  
+  <p>Complete your payment to access exclusive Ebleco lecture notes</p>
+</div>
+
+<div class="container">
+  <h2>Checkout Instructions</h2>
+  <p>Please make payment to the following bank account to complete your purchase:</p>
+
+  <div class="bank-info">
+    <p><strong>BANK NAME:</strong> GTBank</p>
+    <p><strong>Account Number:</strong> 0657296152</p>
+    <p><strong>Account Name:</strong> Daniel Olawale Adeyemi</p>
+  </div>
+
+  <div class="steps">
+    <h3>Steps to Complete Your Purchase:</h3>
+    <ol>
+      <li>Transfer the total amount from your cart to the bank account above.</li>
+      <li>Fill in the payment confirmation form below with your details.</li>
+      <li>Once verified, the purchased lecture notes will be sent to your email/WhatsApp.</li>
+    </ol>
+  </div>
+
+  <h3>Payment Confirmation Form</h3>
+  <form action="https://formspree.io/f/xjggbkae" method="POST" enctype="multipart/form-data">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="_replyto" placeholder="Enter your email" required>
+
+    <label for="cart-summary">Cart Summary</label>
+    <textarea id="cart-summary" name="cart-summary" rows="3" placeholder="List the products you purchased" required></textarea>
+
+    <label for="payment-proof">Proof of Payment (Optional)</label>
+    <input type="file" id="payment-proof" name="attachment" accept="image/*">
+
+    <button type="submit">Submit Payment Confirmation</button>
+  </form>
+
+  <a href="cart.html" class="btn-return">Return to Cart</a>
+
+  <p class="note">Note: Your order will only be processed once payment is confirmed.</p>
+</div>
+
+<footer>
+  <p>&copy; 2025 Ebleco Community Store</p>
+  <p>
+    <a href="index.html">Home</a> | 
+    <a href="cart.html">Shop</a> | 
+    <a href="contact.html">Contact Us</a>
+  </p>
+  <p>Email: theintellect005@gmail.com | WhatsApp: +234 9130115402</p>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById('navMenu').classList.toggle('show');
+}
+</script>
+</body>
+</html>

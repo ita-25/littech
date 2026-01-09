@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LIT Tech Trainings & Cohorts Roadmap</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f9fafb;
+      margin: 0;
+      padding: 0;
+      color: #111827;
+    }
+    header {
+      background: #6b21a8;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    header p {
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #e9d5ff;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .year-section {
+      margin-bottom: 50px;
+    }
+    .year-section h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #6b21a8;
+      margin-bottom: 10px;
+    }
+    .year-section p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+      color: #374151;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      background: #fff;
+      margin: 10px 0;
+      padding: 15px 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    ul li:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    .long-term {
+      background: #f3e8ff;
+      padding: 20px;
+      border-radius: 14px;
+      margin-top: 40px;
+    }
+    .long-term h2 {
+      color: #581c87;
+    }
+    footer {
+      background: #6b21a8;
+      text-align: center;
+      color: #fff;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+
+    /* Modal Styling */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      max-width: 500px;
+      width: 90%;
+      text-align: center;
+      position: relative;
+      animation: pop 0.3s ease-out;
+    }
+    @keyframes pop {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    .close {
+      position: absolute;
+      top: 10px; right: 15px;
+      font-size: 20px;
+      cursor: pointer;
+      color: #6b21a8;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>LIT Tech Trainings & Cohorts Roadmap</h1>
+  <p>Building the future of tech skills, step by step.</p>
+</header>
+
+<div class="container">
+
+  <!-- Example Section -->
+  <div class="year-section">
+    <h2> Year 1: Foundation & Awareness</h2>
+    <p>Goal: Build digital literacy, create excitement about tech, and establish LIT Tech’s reputation.</p>
+    <ul>
+      <li data-info="A beginner-friendly course covering HTML, CSS, and JavaScript basics.">Intro to Web Development</li>
+      <li data-info="Learn UI/UX fundamentals and create mockups with Figma.">Creative Design with Figma</li>
+      <li data-info="Hands-on coding sessions for teenagers.">Coding for Teens</li>
+      <li data-info="Practical digital tools for entrepreneurs: Webflow, WordPress, and branding.">Digital Skills for Entrepreneurs</li>
+      <li data-info="Students build small projects that solve community problems.">Tech for Social Good</li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- Modal -->
+<div id="infoModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 id="modalTitle"></h2>
+    <p id="modalText"></p>
+  </div>
+</div>
+
+<footer>
+  &copy; 2025 LIT Tech. Building the next generation of creators & innovators.
+</footer>
+
+<script>
+  const modal = document.getElementById("infoModal");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalText = document.getElementById("modalText");
+  const closeBtn = document.querySelector(".close");
+
+  // Open modal when a box is clicked
+  document.querySelectorAll("ul li").forEach(item => {
+    item.addEventListener("click", () => {
+      modalTitle.textContent = item.textContent;
+      modalText.textContent = item.getAttribute("data-info");
+      modal.style.display = "flex";
+    });
+  });
+
+  // Close modal
+  closeBtn.onclick = () => modal.style.display = "none";
+  window.onclick = (e) => { if (e.target == modal) modal.style.display = "none"; }
+</script>
+
+</body>
+</html>
